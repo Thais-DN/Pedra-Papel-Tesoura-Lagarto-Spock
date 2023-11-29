@@ -1,4 +1,11 @@
-
+document.getElementById('jogar').addEventListener('click', function(event) {
+  event.preventDefault();
+  var botaoJogar = document.getElementById('jogar');
+  var conteudo = document.getElementById('conteudo');
+  
+  botaoJogar.style.display = 'none'; // Esconde o botão Jogar
+  conteudo.style.display = 'block';  // Mostra o conteúdo permanentemente
+});
 
 let playerScore = 0;
 let computerScore = 0;

@@ -4,18 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Regras</title>
-    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/games.png" type="image/x-icon">
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <div class="container">
-        <div class="title"><h1>A regra é clara!</h1></div>
+    <section class="intro">
+        <div class="title">
+            <h1>A regra é clara!</h1>
+        </div>
         <div class="images">
             <img class="image" src="./img/regras.png" alt="Game Rules" width="370px">
             <img class="image" src="./img/sheldon.jpg" alt="Game Creator" >
         </div>
-        <div class="game"><a class="text" href="./game/game.html">Jogar</a></div>
-    </div>
+        <div class="game">
+            <button id="jogar" class="jogar">Jogar</button>
+        </div>
+    </section>
+
+    <section class="section">
+        <div id="conteudo" style="display: none;" class="conteudo">
+          <h1 class="text_game">Escolha o seu ataque.</h1>
+          <div class="choices">
+            <button onclick="playerChoice('pedra')"><img id="pedra" src="../img/stone.png" alt="Stone" width="50px"></button>
+            <button onclick="playerChoice('papel')"><img id="papel" src="../img/paper.png" alt="Paper" width="50px"></button>
+            <button onclick="playerChoice('tesoura')"><img id="tesoura" src="../img/scissors.png" alt="Scissors" width="50px"></button>
+            <button onclick="playerChoice('lagarto')"><img id="lagarto" src="../img/lizard.png" alt="Lizard" width="50px"></button>
+            <button onclick="playerChoice('spock')"><img id="spock" src="../img/spock.png" alt="Spock" width="50px"></button>
+          </div>
+          <div class="placar">
+            <p class="players">player: <span id="playerScore">0</span></p>
+            <p class="players">Computer: <span id="computerScore">0</span></p>
+          </div>
+          <div class="result">
+            <div class="img_result">
+              <div class="ajustar">
+                <img class="player-choice" src="" alt="" width="50px">
+                <p></p>
+              </div>
+              <div class="ajustar">
+                  <img class="computer-choice" src="" alt="" width="50px">
+                  <p></p>
+              </div>
+            </div>
+            <p class="game-result"></p>
+          </div>     
+      </section>
+
     
+
+    <script src="index.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
