@@ -1,23 +1,27 @@
 body {
     font-family: Arial, sans-serif;
     background-color: antiquewhite;
-  }
+}
 
-  .intro {
-    text-align: center; /* Centraliza o texto */
-  }
-  
-  .images {
-    display: flex; /* Use flexbox para alinhar as imagens */
-    justify-content: center; /* Centraliza horizontalmente as imagens */
-  }
-  
-  .image {
+.intro {
+    text-align: center;
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+}
+
+.image-desktop {
     margin: 0 10px;
     border-radius: 20px;
-  }
-  
-  .jogar {
+}
+
+.image-mobile {
+    border-radius: 20px;
+}
+
+.jogar {
     margin-top: 20px;
     text-align: center;
     width: 120px;
@@ -25,41 +29,53 @@ body {
     border-radius: 15px;
     background-color: black;
     color: antiquewhite;
-  }
-  
-  .section {
+}
+
+.section {
     display: flex;
     justify-content: center;
     text-align: center;
 }
-  .text_game {
+.text_game {
     width: 300px;
     font-size: 24px;
     margin: 30px;
     padding: 5px;
-  }
-  .choices {
-      margin: 10px;
-  }
-  .placar {
-      display: flex;
-      justify-content: space-between;
-  }
-  .players {
-      padding: 5px;
-      font-size: 25px;
-      background-color: black;
-      color: antiquewhite;
-      border-style: groove;
-  }
-  .img_result {
-      display: flex;
-      justify-content: space-between;
-  }
+}
+.choices {
+    margin: 10px;
+}
+.placar {
+    display: flex;
+    justify-content: space-between;
+}
+.players {
+    padding: 5px;
+    font-size: 25px;
+    background-color: black;
+    color: antiquewhite;
+    border-style: groove;
+}
+.img_result {
+    display: flex;
+    justify-content: space-between;
+}
 
-  .ajustar {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-  }
+.ajustar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .image-desktop {
+        display: none; /* Oculta as imagens para desktop em dispositivos móveis */
+    }
+}
+
+@media only screen and (min-width: 601px) {
+    .image-mobile {
+        display: none; /* Oculta a imagem para dispositivos móveis em desktops */
+    }
+}
